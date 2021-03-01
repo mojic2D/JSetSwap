@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="Sample Category"
+            id="com.mojic.jset_swap">
+      </category>
+      <view
+            category="org.eclipse.jdt.ui.java"
+            class="com.mojic.jset_swap.PropertyManagerView"
+            id="com.mojic.jset_swap.views.PropertyManagerView"
+            name="JSetSwap"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectiveExtensions">
+      <perspectiveExtension
+            targetID="org.eclipse.jdt.ui.JavaPerspective">
+         <view
+               id="com.mojic.jset_swap.views.PropertyManagerView"
+               relative="org.eclipse.ui.views.ProblemView"
+               relationship="right"
+               ratio="0.5">
+         </view>
+      </perspectiveExtension>
+   </extension>
+
+</plugin>
